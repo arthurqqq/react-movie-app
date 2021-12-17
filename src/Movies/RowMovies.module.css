@@ -1,0 +1,13 @@
+.row {
+  padding: 1% 2%;
+}
+
+.row_movies::-webkit-scrollbar {
+  display: none;
+}
+
+.row_movies {
+  display: flex;
+  overflow-y: hidden;
+  overflow-x: scroll;
+}

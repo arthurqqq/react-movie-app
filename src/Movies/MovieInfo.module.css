@@ -1,0 +1,43 @@
+.header {
+  display: flex;
+  justify-content: flex-start;
+}
+
+.add_button {
+  justify-content: flex-end;
+  margin-left: auto;
+  top: 50%;
+  bottom: 50%;
+  object-fit: contain;
+  width: 100%;
+  max-width: 50px;
+  z-index: 0;
+  cursor: pointer;
+}
+
+.movie_info_title {
+  font-weight: bold;
+  width: 80%;
+}
+
+.movie_info_image {
+  width: 100%;
+  height: auto;
+  margin-left: 5px;
+  margin-right: 5px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.movie_info_overview {
+  font-weight: bold;
+  text-align: justify;  
+}
+
+.movie_info_review {
+  font-weight: bold;
+  color: green;
+}

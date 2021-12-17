@@ -1,0 +1,5 @@
+{
+  "IMDB_KEY": "ef0afd78f3eabff547ae5c8d4e0061d6",
+  "BASE_URL": "https://api.themoviedb.org/3/",
+  "IMAGE_BASE_URL": "https://image.tmdb.org/t/p/original"
+}
