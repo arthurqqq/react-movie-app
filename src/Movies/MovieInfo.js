@@ -8,7 +8,14 @@ function MovieInfo(props) {
   const listMovieCtx = useContext(ListMovieContext);
 
   function addToMovieList() {
-    listMovieCtx.addMovie("omegalul");    
+    listMovieCtx.addMovie({
+      id: props.movieInfo.id,
+      title: props.movieInfo.title,
+      image: props.movieInfo.image,
+      backdrop: props.movieInfo.backdrop,
+      overview: props.movieInfo.overview,
+      review: props.movieInfo.review
+    });    
   }
 
   return (

@@ -1,13 +1,41 @@
 import ListMovieContext from "./listMovie-context";
+import { useReducer  } from "react";
+
+const defaultListMoviesState = {
+  movies: [],
+};
+
+function myListReducer(state, action) {
+  if (action.type === "ADD") {
+    // console.log(action);
+    let updatedMovies;
+
+    console.log(action.movie);
+    updatedMovies = state.movies.concat(action.movie)
+    console.log("add new movie");
+    return {
+      movies: updatedMovies
+    }
+  }
+  return defaultListMoviesState;
+}
 
 function ListMovieProvider(props) {
 
   function addMovieToList(movie) {
-    console.log(movie);
+    dispatchListMovieAction({
+      type: 'ADD',
+      movie: movie
+    });
   }
 
+  const [listMoviesState, dispatchListMovieAction] = useReducer(
+    myListReducer,
+    defaultListMoviesState
+  );
+
   const movieContext = {
-    movies: ["first movie"],
+    movies: listMoviesState.movies,
     addMovie: addMovieToList,
   };
 

@@ -1,6 +1,5 @@
-import RowMovies from './RowMovies';
+import RowMovies from '../Movies/RowMovies';
 import config from '../config.json';
-import ListMovieProvider from '../store/ListMovieProvider';
 
 const allRows = [
   {
@@ -42,15 +41,13 @@ const allRows = [
   // },
 ]
 
-function Content() {
+function Browse() {
   return (
-    <ListMovieProvider>
-      <section>
-        {/* <RowMovies title="Popular TV shows" url={config.BASE_URL + "movie/popular?api_key=" + config.IMDB_KEY} /> */}
-        {allRows.map(elem => <RowMovies key={elem.id} title={elem.title} url={elem.url}/>)}
-      </section>
-    </ListMovieProvider>
+    <section>
+      {/* <RowMovies title="Popular TV shows" url={config.BASE_URL + "movie/popular?api_key=" + config.IMDB_KEY} /> */}
+      {allRows.map(elem => <RowMovies key={elem.id} title={elem.title} url={elem.url}/>)}
+    </section>
   )
 }
 
-export default Content;
+export default Browse;

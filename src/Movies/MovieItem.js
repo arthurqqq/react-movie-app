@@ -7,11 +7,15 @@ function MovieItem(props) {
   const [isMovieInfoDisplayed, setIsMovieInfoDisplayed] = useState(false)
 
   const movieInfo = {
+    id: props.id,
     title: props.title,
+    image: props.image,
     overview: props.overview,
     review: props.review,
     backdrop: props.backdrop
-  }
+  };
+
+  // console.log(movieInfo)
 
   function openMovieInfo() {
     setIsMovieInfoDisplayed(true);
