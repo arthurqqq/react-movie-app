@@ -6,12 +6,14 @@ const defaultListMoviesState = {
 };
 
 function myListReducer(state, action) {
+  // TODO: remove movie
   if (action.type === "ADD") {
-    // console.log(action);
     let updatedMovies;
 
-    console.log(action.movie);
-    updatedMovies = state.movies.concat(action.movie)
+    // let doMovieAlreadyInList = 
+    // TODO: check existing movie in the list
+
+    updatedMovies = state.movies.concat(action.movie);
     console.log("add new movie");
     return {
       movies: updatedMovies

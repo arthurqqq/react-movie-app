@@ -15,8 +15,6 @@ function MovieItem(props) {
     backdrop: props.backdrop
   };
 
-  // console.log(movieInfo)
-
   function openMovieInfo() {
     setIsMovieInfoDisplayed(true);
   }
@@ -27,7 +25,7 @@ function MovieItem(props) {
 
   return (
     <Fragment>
-      {isMovieInfoDisplayed ? 
+      {isMovieInfoDisplayed ?
         ReactDOM.createPortal(
           <MovieInfo onClose={closeMovieHandler} movieInfo={movieInfo}/>,
           document.getElementById("overlays")

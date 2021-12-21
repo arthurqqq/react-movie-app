@@ -1,4 +1,4 @@
-import config from '../config.json';
+import config from '../../config.json';
 import useFetch from '../hooks/useFetch';
 import MovieItem from './MovieItem';
 import classes from "./RowMovies.module.css"

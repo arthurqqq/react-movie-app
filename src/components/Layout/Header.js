@@ -2,27 +2,27 @@ import { Fragment } from "react";
 import classes from "./Header.module.css";
 //import HeaderCartButton from "./HeaderCartButton";
 import { Link } from "react-router-dom";
+import SearchBar from "./SearchBar";
 
 function Header(props) {
   return (
     <Fragment>
       <header className={classes.header}>
-        <h1>React Movies</h1>
         <Link to="/">
-          <h2>
-            Browse
-          </h2>
+          <h1>React Movies</h1>
         </Link>      
-        <Link to="/my-list">
-          <h2>
+        <h2>
+          <Link to="/">
+            Browse Movies
+          </Link>      
+        </h2>
+        <h2 className={classes.elemSpace}>
+          <Link to="/my-list">
             My list
-          </h2>
-        </Link>      
-        {/* <HeaderCartButton onOpen={props.onOpen} /> */}
+          </Link>      
+        </h2>
+        <SearchBar />
       </header>
-      {/* <div className={classes['main-image']}>
-        <img src={mealImage} alt="Food"/>
-      </div> */}
     </Fragment>
   );
 }

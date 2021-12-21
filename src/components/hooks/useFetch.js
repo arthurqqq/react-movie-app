@@ -11,7 +11,7 @@ function useFetch(url) {
         const response = await fetch(url);
         const data = await response.json();
         setMovies(data.results);
-//        console.table(data.results);
+        // console.table(data.results);
       }
       catch (err) {
         setError(err);

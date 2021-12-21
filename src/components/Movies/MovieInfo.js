@@ -1,6 +1,6 @@
 import Modal from "../UI/Modal";
 import classes from './MovieInfo.module.css';
-import addButton from '../assets/add.png';
+import addButton from '../../assets/add.png';
 import { useContext } from 'react';
 import ListMovieContext from "../store/listMovie-context";
 

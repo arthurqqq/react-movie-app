@@ -1,25 +1,25 @@
-import { Fragment } from 'react/cjs/react.production.min';
 import classes from './App.module.css';
-import Browse from './Layout/Browse';
-import Header from './Layout/Header';
+import BrowseMovies from './components/Movies/BrowseMovies';
+import Header from './components/Layout/Header';
 import {
   Routes,
-  Route
+  Route,
+  useParams
 } from "react-router-dom";
-import MyMovieList from './Movies/MyMovieList';
-import ListMovieProvider from './store/ListMovieProvider';
+import MyMovieList from './components/Movies/MyMovieList';
+import ListMovieProvider from './components/store/ListMovieProvider';
+import SearchMovies from './components/Movies/SearchMovies';
 
 function App() {
-
   return (
     <ListMovieProvider>
       <Header />
       <main className={classes.container}>
-      <Routes>
-        <Route path="/" element={<Browse />} />
-        <Route path="/my-list" element={<MyMovieList />} />
-      </Routes>
-        {/* <Browse /> */}
+        <Routes>
+          <Route path="/" element={<BrowseMovies />} />
+          <Route path="/my-list" element={<MyMovieList />} />
+          <Route path="/search" element={<SearchMovies />} />
+        </Routes>
       </main>
     </ListMovieProvider>
   );
