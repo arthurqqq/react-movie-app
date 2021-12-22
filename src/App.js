@@ -4,7 +4,6 @@ import Header from './components/Layout/Header';
 import {
   Routes,
   Route,
-  useParams
 } from "react-router-dom";
 import MyMovieList from './components/Movies/MyMovieList';
 import ListMovieProvider from './components/store/ListMovieProvider';

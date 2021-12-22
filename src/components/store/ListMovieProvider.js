@@ -10,11 +10,17 @@ function myListReducer(state, action) {
   if (action.type === "ADD") {
     let updatedMovies;
 
-    // let doMovieAlreadyInList = 
-    // TODO: check existing movie in the list
+    // check existing movie in the list
+    let isMovieInList = state.movies.some(elem => (
+      elem["id"] === action.movie.id
+    ));
 
-    updatedMovies = state.movies.concat(action.movie);
-    console.log("add new movie");
+    if (!isMovieInList) {
+      updatedMovies = state.movies.concat(action.movie);
+      console.log("add new movie");
+    } else
+      updatedMovies = [...state.movies]
+
     return {
       movies: updatedMovies
     }

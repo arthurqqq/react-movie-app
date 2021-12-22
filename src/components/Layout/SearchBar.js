@@ -5,10 +5,8 @@ function SearchBar() {
   const navigate = useNavigate();
 
   function confirmSearch(event) {
-    // event.preventDefault();
     if (event.key === 'Enter') {
       // console.log(event.target.value);
-      // navigate("/search/" + event.target.value)
       if (event.target.value !== "")
         navigate("/search?q=" + event.target.value)
     }
@@ -16,8 +14,9 @@ function SearchBar() {
 
   return (
     <input className={classes.inputSearchBar} 
-    placeholder="Title, people, genres..."
-    onKeyDown={confirmSearch}/>
+      placeholder="Title, people, genres..."
+      onKeyDown={confirmSearch}
+    />
   )
 }
 

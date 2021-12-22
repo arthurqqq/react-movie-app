@@ -36,12 +36,7 @@ const allRows = [
     url: config.BASE_URL + "discover/movie?api_key=" + config.IMDB_KEY + "&with_genres=53",
     title: "Thriller",
     id: 6
-  },
-  {
-    url: config.BASE_URL + "tv/popular?api_key=" + config.IMDB_KEY,
-    title: "Popular TV shows",
-    id: 7
-  },
+  }
 ]
 
 function BrowseMovies() {

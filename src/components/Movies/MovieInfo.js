@@ -18,6 +18,8 @@ function MovieInfo(props) {
     });    
   }
 
+  // console.log(props.movieInfo);
+
   return (
     <Modal onClose={props.onClose}>
       <div className={classes.header}>
