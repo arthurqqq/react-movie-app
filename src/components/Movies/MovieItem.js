@@ -30,7 +30,9 @@ function MovieItem(props) {
           <MovieInfo onClose={closeMovieHandler} movieInfo={movieInfo}/>,
           document.getElementById("overlays")
         ) : null}
-      <img onClick={openMovieInfo} className={classes.row_movie} src={props.image} alt="img"/> 
+        <div className={classes.movie}>
+          <img onClick={openMovieInfo} src={props.image} alt="img"/> 
+        </div>
     </Fragment>
   )
 }

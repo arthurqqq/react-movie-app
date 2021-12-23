@@ -10,4 +10,5 @@
   display: flex;
   overflow-y: hidden;
   overflow-x: scroll;
+  /* border: 1px solid green; */
 }

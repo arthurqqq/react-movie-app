@@ -26,8 +26,6 @@ function RowMovies(props) {
       ));
   }
 
-  console.log("yo");
-
   return (
     <div className={classes.row}>
       <h1>{props.title}</h1>
