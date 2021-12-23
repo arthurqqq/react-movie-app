@@ -7,14 +7,17 @@ function SearchBar() {
   function confirmSearch(event) {
     if (event.key === 'Enter') {
       // console.log(event.target.value);
-      if (event.target.value !== "")
-        navigate("/search?q=" + event.target.value)
+      if (event.target.value !== "") {
+        let destination = "/search?q=" + event.target.value;
+        // console.log("destination: " + destination);
+        navigate(destination);
+      }
     }
   }
 
   return (
     <input className={classes.inputSearchBar} 
-      placeholder="Title, people, genres..."
+      placeholder="Title, people..."
       onKeyDown={confirmSearch}
     />
   )

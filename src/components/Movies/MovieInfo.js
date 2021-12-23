@@ -15,10 +15,8 @@ function MovieInfo(props) {
       backdrop: props.movieInfo.backdrop,
       overview: props.movieInfo.overview,
       review: props.movieInfo.review
-    });    
+    });
   }
-
-  // console.log(props.movieInfo);
 
   return (
     <Modal onClose={props.onClose}>
