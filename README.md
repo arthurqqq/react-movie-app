@@ -1,6 +1,6 @@
 # React Movie App
 
-This is a basic movie app created with React
+This is a basic movie (whith TMDB api) created with React
 
 # Installing
 
