@@ -1,6 +1,6 @@
 # React Movie App
 
-This is a basic movie (whith TMDB api) created with React
+This is a basic movie app (whith TMDB api) created with React
 
 # Installing
 
@@ -10,7 +10,7 @@ To get the project running, follow these steps:
 mkdir <folder>
 ```
 
--Enter into that folder
+- Enter into that folder
 ```
 cd <folder>
 ```
