@@ -1,8 +1,6 @@
-import RowMovies from './RowMovies';
 import config from '../../config.json';
-import React from 'react';
 
-const allRows = [
+const requests = [
   {
     url: `${config.BASE_URL}movie/popular?api_key=${config.IMDB_KEY}`,
     title: "Popular movies",
@@ -40,12 +38,4 @@ const allRows = [
   }
 ]
 
-function BrowseMovies() {
-  return (
-    <section>
-      {allRows.map(elem => <RowMovies key={elem.id} title={elem.title} url={elem.url}/>)}
-    </section>
-  )
-}
-
-export default BrowseMovies;
+export default requests;

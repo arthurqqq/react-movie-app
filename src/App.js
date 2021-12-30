@@ -15,7 +15,7 @@ function App() {
       <Header />
       <main className={classes.container}>
         <Routes>
-          <Route path="/" element={<BrowseMovies />} />
+          <Route path="/" element={<BrowseMovies /> } />
           <Route path="/my-list" element={<MyMovieList />} />
           <Route path="/search" element={<SearchMovies />} />
         </Routes>

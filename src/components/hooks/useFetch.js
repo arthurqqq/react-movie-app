@@ -8,6 +8,7 @@ function useFetch(url) {
   useEffect(() => {(
     async function() {
       try {
+        console.log("fetch");
         const response = await fetch(url);
         const data = await response.json();
         setMovies(data.results);
@@ -21,7 +22,7 @@ function useFetch(url) {
     })()
   }, [url]);
 
-  return {movies, loading, error}
+  return {movies, loading, error }
 }
 
 export default useFetch;

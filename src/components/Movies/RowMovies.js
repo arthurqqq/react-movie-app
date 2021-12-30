@@ -2,6 +2,7 @@ import config from '../../config.json';
 import useFetch from '../hooks/useFetch';
 import MovieItem from './MovieItem';
 import classes from "./RowMovies.module.css"
+import React from 'react';
 
 function RowMovies(props) {
   const { movies, loading, error } = useFetch(props.url);

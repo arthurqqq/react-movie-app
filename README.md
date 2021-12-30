@@ -1,6 +1,6 @@
 # React Movie App
 
-This is a basic movie app (whith TMDB api) created with React
+This is a basic movie app (whith TMDB api) created with React. Follow Installing section to get started using the app.
 
 # Installing
 

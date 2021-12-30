@@ -11,7 +11,7 @@ function Header(props) {
           Browse Movies
         </Link>
       </h2>
-      <h2 className={classes.elemSpace}>
+      <h2>
         <Link to="/my-list">
           My list
         </Link>      

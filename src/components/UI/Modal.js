@@ -1,6 +1,4 @@
 import { Fragment } from "react";
-import ReactDOM from "react-dom";
-
 import classes from "./Modal.module.css";
 
 function Backdrop(props) {
@@ -10,8 +8,6 @@ function Backdrop(props) {
 function ModalOverlay(props) {
   return <div className={classes.modal}>{props.children}</div>;
 }
-
-// const portalElement = document.getElementById("overlays");
 
 function Modal(props) {
   return (

@@ -3,12 +3,11 @@
 }
 
 .row_movies::-webkit-scrollbar {
-  display: none;
+  /* display: none; */
 }
 
 .row_movies {
   display: flex;
   overflow-y: hidden;
   overflow-x: scroll;
-  /* border: 1px solid green; */
 }
