@@ -1,10 +1,12 @@
-import { Fragment, useState } from "react";
+import { Fragment, useState, useContext } from "react";
 import classes from "./MovieItem.module.css"
 import ReactDOM from "react-dom";
 import MovieInfo from "./MovieInfo";
+import ListMovieContext from "../store/listMovie-context";
 
 function MovieItem(props) {
   const [isMovieInfoDisplayed, setIsMovieInfoDisplayed] = useState(false)
+  const listMovieCtx = useContext(ListMovieContext);
 
   const movieInfo = {
     id: props.id,
@@ -23,11 +25,15 @@ function MovieItem(props) {
     setIsMovieInfoDisplayed(false);
   }
 
+  function addToMovieList() {
+    listMovieCtx.addMovie(movieInfo);
+  }
+
   return (
     <Fragment>
       {isMovieInfoDisplayed ?
         ReactDOM.createPortal(
-          <MovieInfo onClose={closeMovieHandler} movieInfo={movieInfo}/>,
+          <MovieInfo onAddToMovieList={addToMovieList} onClose={closeMovieHandler} movieInfo={movieInfo}/>,
           document.getElementById("overlays")
         ) : null}
         <div className={classes.movie}>
